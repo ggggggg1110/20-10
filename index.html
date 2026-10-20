@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gửi chị yêu thương 💗</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Indie+Flower&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== MÀN HÌNH KHÓA SỐ ========== -->
+  <main class="screen screen--login" id="loginScreen">
+    <span class="lock-emoji" id="lockEmoji">🔐</span>
+    <h1 class="login-title">Nhập mật khẩu để mở thiệp</h1>
+    <p class="login-sub">— chỉ dành riêng cho chị thôi đó —</p>
+
+    <div class="dots" id="dots">
+      <span class="dot"></span><span class="dot"></span>
+      <span class="dot"></span><span class="dot"></span>
+    </div>
+
+    <div class="keypad" id="keypad">
+      <button class="key" data-k="1">1</button>
+      <button class="key" data-k="2">2</button>
+      <button class="key" data-k="3">3</button>
+      <button class="key" data-k="4">4</button>
+      <button class="key" data-k="5">5</button>
+      <button class="key" data-k="6">6</button>
+      <button class="key" data-k="7">7</button>
+      <button class="key" data-k="8">8</button>
+      <button class="key" data-k="9">9</button>
+      <span class="key key--empty"></span>
+      <button class="key" data-k="0">0</button>
+      <button class="key key--action" id="delBtn">⌫</button>
+    </div>
+
+    <p class="login-error" id="error">Sai mật khẩu rồi, thử lại nhé 💔</p>
+    <p class="hint">Gợi ý: 4 chữ số — ngày đặc biệt của chị đó 🌸</p>
+  </main>
+
+  <!-- ========== VÒNG QUAY MAY MẮN (Ẩn lúc đầu) ========== -->
+  <main class="screen screen--wheel" id="wheelScreen">
+    <div class="wheel-container">
+      <h2 class="wheel-title">Thử vận may nhé chị! 🎁</h2>
+      <p class="wheel-sub">Quay trúng gì em tặng chị cái đó nha 💖</p>
+      
+      <!-- Vòng quay -->
+      <div class="wheel-wrapper">
+        <div class="wheel" id="wheel">
+          <div class="wheel-center">🎁</div>
+        </div>
+        <div class="wheel-pointer">▼</div>
+      </div>
+
+      <button class="btn btn-spin" id="spinBtn">Bắt đầu quay 🎡</button>
+      <p class="wheel-result" id="wheelResult"></p>
+      
+      <button class="btn btn-success" id="goToCardBtn" style="display: none; margin-top: 15px;">Mở thiệp thôi! 💌</button>
+    </div>
+  </main>
+
+  <!-- ========== TẤM THIỆP MỞ RA ========== -->
+  <main class="screen screen--card" id="cardScreen">
+    
+    <div class="click-hint" id="clickHint">👆 Chạm vào thiệp để mở</div>
+
+    <div class="card-wrapper" id="cardWrapper">
+      
+      <!-- Mặt trước của thiệp -->
+      <div class="card-cover">
+        <div class="cover-decor">💌</div>
+        <h2 class="cover-title">Gửi chị...</h2>
+        <p class="cover-sub">(Bấm để mở thiệp)</p>
+      </div>
+
+      <!-- Mặt trong của thiệp -->
+      <div class="card-inside">
+        <div class="ribbon-top"></div>
+
+        <div class="inside-content">
+          
+          <div class="top-section">
+            <h1 class="handwriting">Happy Women's Day</h1>
+            <div class="heart-divider">
+              <span class="deco-icon">❦</span>
+              <span class="heart-icon">♡</span>
+              <span class="deco-icon">❦</span>
+            </div>
+          </div>
+
+          <div class="bottom-section">
+            <p class="letter-text" id="typing"></p>
+          </div>
+
+          <div class="signature">
+            <span class="signature-name">Lê Mạnh Quỳnh</span>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="actions" id="actions">
+      <button class="btn" id="btn">Bấm để nhận thêm 💌</button>
+      <p class="blessing" id="blessing"></p>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
